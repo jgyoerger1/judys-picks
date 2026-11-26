@@ -278,7 +278,7 @@ em { font-variation-settings: "SOFT" 50, "WONK" 1; }
 /* Full-screen menu sheet (phones and small tablets) */
 .menu {
   position: fixed; inset: 0; z-index: 45;
-  display: flex; flex-direction: column; gap: 1.75rem;
+  display: flex; flex-direction: column; gap: 1.25rem;
   padding: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + .75rem) var(--gutter) calc(1.5rem + env(safe-area-inset-bottom, 0px));
   background: var(--bone);
   overflow-y: auto; overscroll-behavior: contain;
@@ -296,7 +296,7 @@ html:not(.js) .menu { display: none; }
 .menu__nav { display: grid; border-top: 1px solid var(--line); }
 .menu__link {
   display: flex; align-items: baseline; gap: 1rem;
-  padding: 1.05rem 0; border-bottom: 1px solid var(--line);
+  padding: .95rem 0; border-bottom: 1px solid var(--line);
   font: 360 clamp(2rem, 9.5vw, 3.1rem)/1 var(--serif); letter-spacing: -.035em;
   font-variation-settings: "SOFT" 50, "WONK" 0;
   text-decoration: none;
@@ -312,6 +312,8 @@ html:not(.js) .menu { display: none; }
 .menu__foot { margin-top: auto; }
 .socials--menu { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; margin-top: .6rem; }
 .socials--menu .go { width: 100%; justify-content: space-between; min-height: 46px; }
+/* With an odd number of links, the last one takes the full row instead of leaving a gap. */
+.socials--menu li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .menu__link:active, .menu__brands a:active { opacity: .6; }
 
 /* Contents rise in after the sheet opens; they reset instantly on close. */
@@ -764,6 +766,7 @@ em.hero__ink { padding-right: .04em; }
 @media (max-width: 699px) {
   .socials { display: grid; grid-template-columns: 1fr 1fr; align-self: stretch; }
   .socials .go { width: 100%; }
+  .socials li:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 /* Portrait: Judy in an arch that stands on the bottom edge of the cell like a
