@@ -347,7 +347,13 @@
     if (id && id !== 'top' && !target) return false;
     let y = 0;
     if (id === 'pink-drink' && stage) y = stage.featureY();
-    else if (target) y = target.getBoundingClientRect().top + window.scrollY - (id === 'about' ? 28 : 0);
+    else if (target) {
+      const rect = target.getBoundingClientRect();
+      // Small targets (the social links) land mid-screen so their surroundings show too.
+      y = target.dataset.scroll === 'center'
+        ? rect.top + window.scrollY - (window.innerHeight - rect.height) / 2
+        : rect.top + window.scrollY - (id === 'about' ? 28 : 0);
+    }
     window.scrollTo({ top: Math.max(0, y), behavior: instant || reduce ? 'auto' : 'smooth' });
     if (target) target.focus({ preventScroll: true });
     return true;
