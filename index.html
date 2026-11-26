@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Private concept: remove this robots tag when the site goes live. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Judy’s Picks | Wellness picks and side-income ideas from Judy Stallings</title>
+  <meta name="description" content="Judy Stallings has worked from home for 15 years. Find the Pink Drink, her wellness picks and the side-income ideas she shares: seven brands on one page.">
+  <meta name="theme-color" content="#f1ebe0">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Judy’s Picks">
+  <meta property="og:description" content="Commuting is overrated. The wellness picks and side-income ideas Judy Stallings shares, all on one page.">
+  <!-- Social previews need a full address. tools/publish.mjs rewrites the next line
+       to the live one when it publishes, so keep it exactly as it is here. -->
+  <meta property="og:image" content="https://jordanyoerger.com/judys-picks/assets/og.jpg">
+  <meta property="og:url" content="https://jordanyoerger.com/judys-picks/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <script>
+    // Marks the page as script-enabled before first paint. If the main script
+    // never arrives, the timer below puts everything back on screen.
+    (function () {
+      var h = document.documentElement;
+      h.classList.add('js', 'boot');
+      setTimeout(function () {
+        if (!window.__judyReady) { h.classList.remove('boot'); h.classList.add('fallback'); }
+      }, 3500);
+      // Fetch the two headline fonts early. Skipped when the page is opened
+      // straight from a folder, where browsers refuse font preloads.
+      if (location.protocol !== 'file:') {
+        ['fonts/fraunces-roman.woff2', 'fonts/fraunces-italic.woff2'].forEach(function (href) {
+          var link = document.createElement('link');
+          link.rel = 'preload'; link.as = 'font'; link.type = 'font/woff2'; link.crossOrigin = 'anonymous'; link.href = href;
+          document.head.appendChild(link);
+        });
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <path id="leaf" d="M0 0C42-30 112-28 156 0 112 26 42 28 0 0Z"/>
+  </defs>
+  <symbol id="i-ne" viewBox="0 0 16 16"><path d="M4.25 11.75 11.5 4.5M5.25 4.25h6.5v6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 2.75v10.5M3.75 9 8 13.25 12.25 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 16 16"><path d="M8 13.25V2.75M3.75 7 8 2.75 12.25 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 16 16"><path d="M8 0c.5 4.6 3.4 7.5 8 8-4.6.5-7.5 3.4-8 8-.5-4.6-3.4-7.5-8-8 4.6-.5 7.5-3.4 8-8Z" fill="currentColor"/></symbol>
+  <symbol id="branch" viewBox="0 0 600 900">
+    <path d="M296 900C282 700 338 520 316 330S300 120 346 16" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <g fill="currentColor">
+      <use href="#leaf" transform="translate(297 822) rotate(-36)"/>
+      <use href="#leaf" transform="translate(298 760) rotate(-143) scale(.96)"/>
+      <use href="#leaf" transform="translate(302 690) rotate(-42) scale(1.06)"/>
+      <use href="#leaf" transform="translate(306 628) rotate(-138) scale(1.02)"/>
+      <use href="#leaf" transform="translate(311 560) rotate(-35)"/>
+      <use href="#leaf" transform="translate(315 498) rotate(-146) scale(.94)"/>
+      <use href="#leaf" transform="translate(317 430) rotate(-44) scale(.95)"/>
+      <use href="#leaf" transform="translate(316 368) rotate(-140) scale(.9)"/>
+      <use href="#leaf" transform="translate(313 300) rotate(-40) scale(.9)"/>
+      <use href="#leaf" transform="translate(310 240) rotate(-144) scale(.84)"/>
+      <use href="#leaf" transform="translate(312 180) rotate(-47) scale(.8)"/>
+      <use href="#leaf" transform="translate(321 120) rotate(-136) scale(.72)"/>
+      <use href="#leaf" transform="translate(333 68) rotate(-54) scale(.64)"/>
+      <use href="#leaf" transform="translate(346 18) rotate(-78) scale(.6)"/>
+    </g>
+  </symbol>
+</svg>
+
+<a class="skip" href="#picks">Skip to the picks</a>
+
+<header class="nav" data-nav>
+  <a class="brand" href="#top" aria-label="Judy’s Picks, back to the top">
+    <span class="brand__name">Judy’s <em>Picks</em></span>
+    <svg class="brand__star" aria-hidden="true"><use href="#i-star"/></svg>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#pink-drink">The Pink Drink</a>
+    <a href="#picks">All seven</a>
+    <a href="#about">About Judy</a>
+  </nav>
+  <a class="nav__cta" href="https://linktr.ee/judystallings" target="_blank" rel="noopener">Find Judy<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> on social (opens in a new tab)</span></a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="nav__toggle-label">Menu</span>
+    <span class="nav__toggle-icon" aria-hidden="true"><i></i><i></i></span>
+  </button>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+  <nav class="menu__nav" aria-label="Sections">
+    <a class="menu__link" href="#pink-drink" style="--i:0"><span>01</span>The Pink Drink</a>
+    <a class="menu__link" href="#picks" style="--i:1"><span>02</span>All seven picks</a>
+    <a class="menu__link" href="#about" style="--i:2"><span>03</span>About Judy</a>
+  </nav>
+  <div class="menu__quick" style="--i:3">
+    <p class="label">Straight to a brand</p>
+    <ul class="menu__brands">
+      <li><a href="https://hempworx.com/judystallings" target="_blank" rel="noopener">HempWorx<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+      <li><a href="https://nottodaymeno.com/" target="_blank" rel="noopener">Not Today Meno<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+      <li><a href="https://immunotec.com/en-US/judystallings" target="_blank" rel="noopener">Immunotec<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+      <li><a href="https://orderlymeds.com/?_ef_transaction_id=&amp;oid=2&amp;affid=242" target="_blank" rel="noopener">OrderlyMeds<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+      <li><a href="https://fuelfactorx.com/?ref=JUDYSTALLINGS" target="_blank" rel="noopener">Fuel Factor X<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+      <li><a href="https://shiftai.club/?ref=digitalmischief" target="_blank" rel="noopener">SHIFT<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+      <li><a href="https://clickbaitpays.me/?ref=judystallings" target="_blank" rel="noopener">Clickbait Pays<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+    </ul>
+  </div>
+  <div class="menu__foot" style="--i:4">
+    <a class="btn btn--solid" href="https://linktr.ee/judystallings" target="_blank" rel="noopener">Find Judy on social<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a>
+    <p class="fine">I may earn a commission through some links.</p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ Stage: hero, then the Pink Drink photo opens out of the headline ============ -->
+  <section class="stage" id="top" aria-labelledby="hero-title">
+    <div class="stage__pin">
+      <div class="stage__scene">
+
+        <div class="hero">
+          <div class="wall" aria-hidden="true">
+            <div class="wall__shift">
+              <div class="wall__light"><i></i><i></i></div>
+              <svg class="wall__branch wall__branch--a"><use href="#branch"/></svg>
+              <svg class="wall__branch wall__branch--b"><use href="#branch"/></svg>
+              <svg class="wall__branch wall__branch--c"><use href="#branch"/></svg>
+            </div>
+          </div>
+
+          <div class="hero__inner">
+            <div class="hero__top">
+              <p class="eyebrow hero__eyebrow" data-intro style="--d:320"><img class="hero__avatar" src="assets/judy-avatar.webp" width="132" height="132" alt="" decoding="async"><span>Judy Stallings</span><span class="slash">/</span><span class="hero__since">Home office, 15 years running</span></p>
+            </div>
+
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__row hero__row--a">
+                <span class="hero__word"><span class="hero__ink" style="--d:60">Commuting</span></span>
+                <span class="hero__tail">
+                  <span class="hero__word"><span class="hero__ink" style="--d:130">is</span></span>
+                  <span class="pill-slot" aria-hidden="true"></span>
+                </span>
+              </span>
+              <span class="hero__row hero__row--b">
+                <span class="hero__word"><em class="hero__ink" style="--d:200">overrated.</em></span>
+              </span>
+            </h1>
+
+            <div class="hero__foot">
+              <div class="hero__pitch">
+                <p class="hero__lede" data-intro style="--d:380">I’m Judy. These are the wellness picks, side-income ideas and everyday finds I share. Seven brands, one page, no digging for that link from my last post.</p>
+                <div class="hero__actions" data-intro style="--d:440">
+                  <a class="btn btn--solid" href="#picks">See all seven<svg class="i i--down" aria-hidden="true"><use href="#i-down"/></svg></a>
+                  <a class="btn btn--ghost" href="https://hempworx.com/US/judystallings/products/categories/xetrm-2363" target="_blank" rel="noopener">Here for the Pink Drink?<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> (opens in a new tab)</span></a>
+                </div>
+                <p class="fine" data-intro style="--d:500">I may earn a commission through some links.</p>
+              </div>
+              <a class="hero__cue" href="#pink-drink" data-intro style="--d:560">
+                <span class="hero__cue-track" aria-hidden="true"><i></i></span>
+                <span class="hero__cue-text">Scroll for the Pink Drink</span>
+              </a>
+            </div>
+
+            <a class="pill-link" href="#pink-drink" tabindex="-1" aria-hidden="true"></a>
+          </div>
+        </div>
+
+        <figure class="media">
+          <div class="media__box">
+            <img class="media__img"
+                 src="assets/pink-drink.webp"
+                 srcset="assets/pink-drink-900.webp 900w, assets/pink-drink.webp 1448w"
+                 sizes="100vw" width="1448" height="1086"
+                 alt="A pink drink over ice in a ribbed glass, with raspberries and a green sprig on a stone ledge in warm sunlight"
+                 decoding="async" fetchpriority="high">
+            <figcaption class="media__caption">Illustrative image, not product photography</figcaption>
+          </div>
+        </figure>
+
+        <div class="feature" id="pink-drink" tabindex="-1">
+          <div class="feature__scrim" aria-hidden="true"></div>
+          <div class="feature__frame" aria-hidden="true"></div>
+          <div class="feature__copy">
+            <p class="eyebrow feature__eyebrow"><span class="dot"></span>Featured pick <span class="slash">/</span> HempWorx</p>
+            <h2 class="feature__title">
+              <span class="mask"><span class="mask__in">The Pink</span></span>
+              <span class="mask"><span class="mask__in"><em>Drink.</em></span></span>
+            </h2>
+            <p class="feature__text">Here for the Pink Drink? You’re in the right place. Product details and current offers are in my HempWorx shop.</p>
+            <div class="feature__actions">
+              <a class="btn btn--feature" href="https://hempworx.com/US/judystallings/products/categories/xetrm-2363" target="_blank" rel="noopener">Shop the Pink Drink<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> (opens in a new tab)</span></a>
+              <a class="link" href="https://hempworx.com/judystallings" target="_blank" rel="noopener">See all HempWorx<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stage__dim" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Everything after the opening scene rides on one sheet that slides over it. -->
+  <div class="sheet">
+
+  <!-- ============ What this page is ============ -->
+  <section class="manifesto" aria-labelledby="manifesto-title">
+    <div class="wrap manifesto__grid">
+      <h2 class="eyebrow" id="manifesto-title" data-reveal><span class="dot"></span>What this page is</h2>
+      <p class="manifesto__text" data-fill>I’ve worked from home for fifteen years, and I share what I find along the way. This page keeps every link in one place: the <em>wellness picks,</em> the <em>side-income ideas</em> and the odd <em>everyday find.</em></p>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <div class="ticker__group">
+        <span>Wellness picks</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Side-income ideas</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Everyday finds</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Zero commute</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Wellness picks</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Side-income ideas</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Everyday finds</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Zero commute</span><svg class="i"><use href="#i-star"/></svg>
+      </div>
+      <div class="ticker__group">
+        <span>Wellness picks</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Side-income ideas</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Everyday finds</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Zero commute</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Wellness picks</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Side-income ideas</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Everyday finds</span><svg class="i"><use href="#i-star"/></svg>
+        <span>Zero commute</span><svg class="i"><use href="#i-star"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ The directory ============ -->
+  <section class="picks" id="picks" aria-labelledby="picks-title" tabindex="-1">
+    <div class="wrap">
+      <header class="picks__head">
+        <div>
+          <p class="eyebrow" data-reveal><span class="dot"></span>The directory</p>
+          <h2 class="display" id="picks-title" data-reveal="mask"><span class="mask"><span class="mask__in">All <em>seven.</em></span></span></h2>
+        </div>
+        <div class="picks__tools" data-reveal>
+          <div class="chips" role="group" aria-label="Filter the picks by category">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All<span>7</span></button>
+            <button class="chip" type="button" data-filter="wellness" aria-pressed="false">Wellness<span>4</span></button>
+            <button class="chip" type="button" data-filter="income" aria-pressed="false">Side-income ideas<span>3</span></button>
+            <button class="chip" type="button" data-filter="everyday" aria-pressed="false">Everyday finds<span>1</span></button>
+          </div>
+        </div>
+      </header>
+
+      <p class="picks__note" data-reveal>
+        <span id="picks-count" role="status">Showing all 7 brands and programs</span>
+        <span>I may earn a commission through some links.</span>
+      </p>
+
+      <ol class="list" id="list">
+
+        <li class="pick" data-cat="wellness" style="--tone:var(--rose);--tone-ink:var(--rose-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">01</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Hw</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">HempWorx</h3>
+              <p class="pick__tags"><span class="tag">Wellness</span><span class="tag tag--solid">Featured</span></p>
+            </div>
+            <p class="pick__desc">Home of the Pink Drink. Go straight to the feature, or browse the full HempWorx shop.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://hempworx.com/US/judystallings/products/categories/xetrm-2363" target="_blank" rel="noopener">Pink Drink<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> at HempWorx (opens in a new tab)</span></a>
+              <a class="go" href="https://hempworx.com/judystallings" target="_blank" rel="noopener">Full shop<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> at HempWorx (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+        <li class="pick" data-cat="wellness" style="--tone:var(--lilac);--tone-ink:var(--lilac-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">02</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Nm</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">Not Today Meno</h3>
+              <p class="pick__tags"><span class="tag">Wellness</span></p>
+            </div>
+            <p class="pick__desc">My Not Today Meno link. It opens the product page in my Immunotec shop.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://nottodaymeno.com/" target="_blank" rel="noopener">See the product<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> for Not Today Meno (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+        <li class="pick" data-cat="wellness income" style="--tone:var(--sage);--tone-ink:var(--sage-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">03</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Im</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">Immunotec</h3>
+              <p class="pick__tags"><span class="tag">Wellness</span><span class="tag">Team</span></p>
+            </div>
+            <p class="pick__desc">Browse the Immunotec catalog, check out the five-day sampler, or see my team page.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://immunotec.com/en-US/judystallings" target="_blank" rel="noopener">Shop<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> Immunotec (opens in a new tab)</span></a>
+              <a class="go" href="https://immunotec.com/en-US/judystallings/page/bodyshot" target="_blank" rel="noopener">Sampler<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> from Immunotec (opens in a new tab)</span></a>
+              <a class="go" href="https://immunotec.com/en-US/judystallings/enrollment/packs" target="_blank" rel="noopener">Team<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> page at Immunotec (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+        <li class="pick" data-cat="wellness" style="--tone:var(--sky);--tone-ink:var(--sky-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">04</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Om</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">OrderlyMeds</h3>
+              <p class="pick__tags"><span class="tag">Wellness</span></p>
+            </div>
+            <p class="pick__desc">Visit the provider’s website for its online weight-management services.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://orderlymeds.com/?_ef_transaction_id=&amp;oid=2&amp;affid=242" target="_blank" rel="noopener">Visit the site<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> for OrderlyMeds (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+        <li class="pick" data-cat="everyday" style="--tone:var(--butter);--tone-ink:var(--butter-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">05</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Fx</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">Fuel Factor X</h3>
+              <p class="pick__tags"><span class="tag">Everyday finds</span></p>
+            </div>
+            <p class="pick__desc">For the miles you do drive: a fuel treatment. Product details are on the brand’s site.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://fuelfactorx.com/?ref=JUDYSTALLINGS" target="_blank" rel="noopener">Visit the site<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> for Fuel Factor X (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+        <li class="pick" data-cat="income" style="--tone:var(--plum);--tone-ink:var(--plum-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">06</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Sh</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">SHIFT</h3>
+              <p class="pick__tags"><span class="tag">Side-income ideas</span></p>
+            </div>
+            <p class="pick__desc">An AI studio membership. Read the program details on the SHIFT website.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://shiftai.club/?ref=digitalmischief" target="_blank" rel="noopener">Visit the site<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> for SHIFT (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+        <li class="pick" data-cat="income" style="--tone:var(--peach);--tone-ink:var(--peach-ink)">
+          <div class="pick__clip"><div class="pick__in" data-reveal>
+            <span class="pick__no" aria-hidden="true">07</span>
+            <span class="pick__swatch" aria-hidden="true"><i>Cp</i></span>
+            <div class="pick__head">
+              <h3 class="pick__name">Clickbait Pays</h3>
+              <p class="pick__tags"><span class="tag">Side-income ideas</span></p>
+            </div>
+            <p class="pick__desc">Visit the site to see how the advertising program works.</p>
+            <div class="pick__links">
+              <a class="go go--main" href="https://clickbaitpays.me/?ref=judystallings" target="_blank" rel="noopener">Visit the site<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> for Clickbait Pays (opens in a new tab)</span></a>
+            </div>
+          </div></div>
+        </li>
+
+      </ol>
+
+      <p class="picks__legal" data-reveal>Purchases and sign-ups happen on each partner’s own website, on their terms.</p>
+    </div>
+
+    <!-- Follows the pointer down the list on desktop and shows the hovered brand's
+         logo. Decorative: one panel per row, in the same order as the list.
+         Logos come from each brand's own site (see source/logos/SOURCES.txt).
+         --w sets each logo's width so wide and compact marks look the same size. -->
+    <div class="tile" aria-hidden="true">
+      <div class="tile__clip">
+        <div class="tile__reel">
+          <div class="tile__panel"><span class="tile__no">01</span><img class="tile__logo" src="assets/logos/hempworx.png" width="271" height="42" alt="" loading="lazy" decoding="async" style="--w:74%"><span class="tile__cat">Wellness</span></div>
+          <div class="tile__panel"><span class="tile__no">02</span><img class="tile__logo" src="assets/logos/immunotec.svg" width="226" height="26" alt="" loading="lazy" decoding="async" style="--w:78%"><span class="tile__sub">She+</span><span class="tile__cat">Wellness</span></div>
+          <div class="tile__panel"><span class="tile__no">03</span><img class="tile__logo" src="assets/logos/immunotec.svg" width="226" height="26" alt="" loading="lazy" decoding="async" style="--w:78%"><span class="tile__cat">Wellness / Team</span></div>
+          <div class="tile__panel"><span class="tile__no">04</span><img class="tile__logo" src="assets/logos/orderlymeds.webp" width="300" height="51" alt="" loading="lazy" decoding="async" style="--w:76%"><span class="tile__cat">Wellness</span></div>
+          <div class="tile__panel tile__panel--dark"><span class="tile__no">05</span><img class="tile__logo" src="assets/logos/fuelfactorx.webp" width="520" height="196" alt="" loading="lazy" decoding="async" style="--w:58%"><span class="tile__cat">Everyday</span></div>
+          <div class="tile__panel"><span class="tile__no">06</span><img class="tile__logo" src="assets/logos/shift.svg" width="2172" height="703" alt="" loading="lazy" decoding="async" style="--w:64%"><span class="tile__cat">Side income</span></div>
+          <div class="tile__panel"><span class="tile__no">07</span><img class="tile__logo" src="assets/logos/clickbaitpays.webp" width="580" height="116" alt="" loading="lazy" decoding="async" style="--w:78%"><span class="tile__cat">Side income</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ About Judy ============ -->
+  <section class="about" id="about" aria-labelledby="about-title" tabindex="-1">
+    <div class="wrap">
+      <div class="bento">
+
+        <div class="cell cell--intro" data-reveal>
+          <p class="eyebrow"><span class="dot"></span>Meet Judy Stallings</p>
+          <h2 class="display" id="about-title">Fifteen years. <em>Zero commutes.</em></h2>
+          <p class="about__bio">The home office is where all of this happens. Want to see what I’m sharing lately? Find me on social.</p>
+          <a class="btn btn--solid" href="https://linktr.ee/judystallings" target="_blank" rel="noopener">Find Judy on social<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg><span class="sr"> (opens in a new tab)</span></a>
+        </div>
+
+        <!-- Judy's portrait in an arch, with a slowly turning stamp beside it.
+             To change the photo, replace assets/judy.webp (the original is in source/). -->
+        <div class="cell cell--portrait" data-reveal>
+          <figure class="portrait">
+            <div class="portrait__arch">
+              <img src="assets/judy.webp" width="614" height="704"
+                   alt="Judy Stallings smiling with her arms crossed, in warm evening light"
+                   decoding="async" fetchpriority="low">
+            </div>
+            <div class="portrait__stamp" aria-hidden="true">
+              <svg class="portrait__ring" viewBox="0 0 200 200">
+                <defs><path id="ring" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
+                <text><textPath href="#ring">JUDY STALLINGS / WORKING FROM HOME / </textPath></text>
+              </svg>
+              <svg class="portrait__star"><use href="#i-star"/></svg>
+            </div>
+          </figure>
+        </div>
+
+        <div class="cell cell--odo" data-reveal>
+          <p class="label">Today’s commute</p>
+          <div class="odo" role="img" aria-label="Zero miles" data-odo="027.4"><span class="odo__static">000.0</span></div>
+          <p class="cell__note">Miles. Same as yesterday.</p>
+        </div>
+
+        <div class="cell cell--years" data-reveal>
+          <p class="label">Working from home</p>
+          <p class="cell__figure">15</p>
+          <p class="cell__note">Years, and counting.</p>
+        </div>
+
+        <a class="cell cell--seven" href="#picks" data-reveal>
+          <p class="label">On this page</p>
+          <p class="cell__figure">7</p>
+          <p class="cell__note">Brands and programs.<span class="cell__go">See them all<svg class="i" aria-hidden="true"><use href="#i-up"/></svg></span></p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /.sheet -->
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <p class="footer__kicker" data-reveal>Still looking for <em>that link?</em></p>
+      <div class="footer__cols" data-reveal>
+        <nav aria-label="Footer">
+          <p class="label">On this page</p>
+          <ul>
+            <li><a href="#pink-drink">The Pink Drink</a></li>
+            <li><a href="#picks">All seven picks</a></li>
+            <li><a href="#about">About Judy</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="label">The picks</p>
+          <ul class="footer__brands">
+            <li><a href="https://hempworx.com/judystallings" target="_blank" rel="noopener">HempWorx</a></li>
+            <li><a href="https://nottodaymeno.com/" target="_blank" rel="noopener">Not Today Meno</a></li>
+            <li><a href="https://immunotec.com/en-US/judystallings" target="_blank" rel="noopener">Immunotec</a></li>
+            <li><a href="https://orderlymeds.com/?_ef_transaction_id=&amp;oid=2&amp;affid=242" target="_blank" rel="noopener">OrderlyMeds</a></li>
+            <li><a href="https://fuelfactorx.com/?ref=JUDYSTALLINGS" target="_blank" rel="noopener">Fuel Factor X</a></li>
+            <li><a href="https://shiftai.club/?ref=digitalmischief" target="_blank" rel="noopener">SHIFT</a></li>
+            <li><a href="https://clickbaitpays.me/?ref=judystallings" target="_blank" rel="noopener">Clickbait Pays</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">Elsewhere</p>
+          <ul>
+            <li><a href="https://linktr.ee/judystallings" target="_blank" rel="noopener">Find Judy on social<svg class="i" aria-hidden="true"><use href="#i-ne"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer__mark" aria-hidden="true"><span class="footer__mark-fit">Judy’s <em>Picks</em></span></p>
+
+    <div class="footer__legal">
+      <p>Purchases and sign-ups happen on partner websites. Judy may earn a commission through some links. Nothing here is medical advice or a promise of income. Brand names and logos belong to their respective owners.</p>
+      <p>Private concept for Judy Stallings. <span data-year>2026</span>.</p>
+      <a class="footer__top-link" href="#top">Back to top<svg class="i" aria-hidden="true"><use href="#i-up"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
